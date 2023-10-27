@@ -44,27 +44,6 @@ app.get("/api",(req, res) => {
   })
 })
 
-// app.get("/api/:date?", (req, res) => {
-//   const date = new Date(req.params.date);
-//   console.log(req.params.date);
-//   if (!isNaN(date.getTime())) {
-//     res.json({
-//       unix: parseInt(date.getTime()),
-//       utc: date.toUTCString()
-//     });
-//   } else if (!req.params.date) {
-//     let currentDate = new Date();
-//     res.json({
-//       unix: parseInt(currentDate.getTime()),
-//       utc: currentDate.toUTCString()
-//     });
-//   } else {
-//     res.json({
-//       error: "Invalid Date"
-//     });
-//   }
-// });
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
